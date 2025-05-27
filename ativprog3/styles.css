@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+body{
+    background-color: #ddd;
+    color:#444;
+    font: Helvetica;
+    line-height: 1.5em;
+    width: 60%;
+    margin: auto;
+}
+
+main{
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;   
+}
+
+section{
+    border-top: gray solid 1px;
+}
+
+h1, h2{
+    margin-top: 1.1em;
+    color: rgb(140,76,8);
+}

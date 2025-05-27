@@ -9,12 +9,17 @@
 
 <body>
     <h1>Cadastro de Cliente</h1>
-    <form action="cadastrarcliente.php" method="post">
+    <form action="cadastraCliente.php" method="post">
         <fieldset>
             <legend>Dados pessoais:</legend>
             <div>
+                <label>
+                    <input type="Hidden" id="Invisivel" value="Invisível">
+                </label>
+            </div>
+            <div>
                 <label>Nome:
-                    <input type="text" minlength="2" maxlength="50" autofocus>
+                    <input type="text" name="nome" id="nome" minlength="2" maxlength="50" autofocus>
                 </label>
             </div>
             <div>
@@ -23,28 +28,33 @@
                 </label>
             </div>
             <div>
-                <label for="cpf">Cpf:
-                    <input type="text" name="cpf" id="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="11">
+                <label for="CPF">CPF:
+                    <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14">
                 </label>
             </div>
             <div>
                 <label>Idade:
-                    <input type="number" nameida="idade" pattern="(\d{2})\ \d{5}-\d{4}">
+                    <input type="number" name="idade" id="idade">
                 </label>
             </div>
             <div>
                 <label>Telefone:
-                    <input type="tel">
+                    <input type="tel" name="telefone" id="telefone"> 
                 </label>
             </div>
             <div>
                 <label>Data de nascimento:
-                    <input type="date">
+                    <input type="date" name="data_de_nascimento" id="data_de_nascimento" >
                 </label>
             </div>
             <div>
                 <label>sexo:
-                    <input type="text" pattern="[A-Za-z]">
+                    <input type="text" name="sexo" id="sexo" pattern="[A-Za-z]">
+                </label>
+            </div>
+            <div>
+                <label>Nacionalidade:
+                    <input type="text" name="Nacionalidade" id="Nacionalidade" value="brasileiro" readonly pattern="[A-Za-z]">
                 </label>
             </div>
             <div>
@@ -61,17 +71,17 @@
             <legend>Endereço de entrega</legend>
             <div>
                 <label>CEP
-                    <input type="text">
+                    <input type="text" name="cep" id="cep"> 
                 </label>
             </div>
             <div>
                 <label>Tipo de logradouro
-                    <input type="text">
+                    <input type="text" name="tipo_de_logradouro" id="tipo_de_logradouro">
                 </label>
             </div>
             <div>
                 <label>Logradouro
-                    <input type="text">
+                    <input type="text" name="logradouro" id="logradouro">
                 </label>
             </div>
             <div>
@@ -153,7 +163,7 @@
         <label>Outros esportes:</label>
 
         <div>
-            <textarea name="Informaçõesadicionais" id="Informações" rows="6" cols="50" maxlength="50"></textarea>
+            <textarea name="Outros_esportes" id="Outros_esportes" rows="6" cols="50" maxlength="50"></textarea>
         </div>
             <label>Anexar arquivo:
                 <input type="file" name="Escolher ficheiro"></label>
