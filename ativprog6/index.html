@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agenda Corridas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <h1>CALENDÁRIO DE CORRIDAS</h1>
+    <section>
+      <p>Cadastre corridas com nome, data, coordenação e uma imagem local do seu computador.</p>
+    </section>
+
+    <section class="formulario">
+      <label for="nome">Nome da corrida:<input type="text" id="nome" placeholder="Nome da Corrida"></label>
+      <label for="data">Data da corrida:<input type="date" id="data"></label>
+      <label for="coordenacao">Coordenação:<input type="text" id="coordenacao" placeholder="Coordenação (ex: Poty Run)"></label>
+      <input type="file" id="imagem" accept="image/*">
+      <button onclick="adicionarCorrida()">➕ Adicionar Corrida</button>
+    </section>
+
+    <section id="listaCorridas">
+      <!-- Corridas renderizadas aqui -->
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

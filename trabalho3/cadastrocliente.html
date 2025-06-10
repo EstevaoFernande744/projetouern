@@ -5,171 +5,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Cliente</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <h1>Cadastro de Cliente</h1>
-    <form action="cadastraCliente.php" method="post">
-        <fieldset>
-            <legend>Dados pessoais:</legend>
-            <div>
-                <label>
-                    <input type="Hidden" id="Invisivel" value="Invisível">
-                </label>
-            </div>
-            <div>
-                <label>Nome:
-                    <input type="text" name="nome" id="nome" minlength="2" maxlength="50" autofocus>
-                </label>
-            </div>
-            <div>
-                <label for="email_usuario">E-mail:
-                    <input type="email" name="email_usuario" id="email_usuario">
-                </label>
-            </div>
-            <div>
-                <label for="CPF">CPF:
-                    <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" maxlength="14">
-                </label>
-            </div>
-            <div>
-                <label>Idade:
-                    <input type="number" name="idade" id="idade">
-                </label>
-            </div>
-            <div>
-                <label>Telefone:
-                    <input type="tel" name="telefone" id="telefone"> 
-                </label>
-            </div>
-            <div>
-                <label>Data de nascimento:
-                    <input type="date" name="data_de_nascimento" id="data_de_nascimento" >
-                </label>
-            </div>
-            <div>
-                <label>sexo:
-                    <input type="text" name="sexo" id="sexo" pattern="[A-Za-z]">
-                </label>
-            </div>
-            <div>
-                <label>Nacionalidade:
-                    <input type="text" name="Nacionalidade" id="Nacionalidade" value="brasileiro" readonly pattern="[A-Za-z]">
-                </label>
-            </div>
-            <div>
-                <label>Estado civil:</label>
-                <div>
-                    <label><input type="radio" name="estadocivil">Solteiro</label>
-                    <label><input type="radio" name="estadocivil">Casado</label>
-                    <label><input type="radio" name="estadocivil">Divorciado</label>
-                    <label><input type="radio" name="estadocivil">Viúvo(a)</label>
-                </div>
-            </div>
-        </fieldset>
-        <fieldset>
-            <legend>Endereço de entrega</legend>
-            <div>
-                <label>CEP
-                    <input type="text" name="cep" id="cep"> 
-                </label>
-            </div>
-            <div>
-                <label>Tipo de logradouro
-                    <input type="text" name="tipo_de_logradouro" id="tipo_de_logradouro">
-                </label>
-            </div>
-            <div>
-                <label>Logradouro
-                    <input type="text" name="logradouro" id="logradouro">
-                </label>
-            </div>
-            <div>
-                <label>Bairro
-                    <input type="text">
-                </label>
-            </div>
-            <div>
-                <label>Cidade
-                    <input type="text">
-                </label>
-            </div>
-            <div>
-                <label>Estado</label>
-                <select name="Estado" id="Estado">
-                    <option value="none">none</option>
-                    <option value="Acre">Acre</option>
-                    <option value="Alagoas">Alagoas</option>
-                    <option value="Amapá">Amapá</option>
-                    <option value="Amazonas">Amazonas</option>
-                    <option value="Bahia">Bahia</option>
-                    <option value="Ceará">Ceará</option>
-                    <option value="Distrito_Federal">Distrito Federal</option>
-                    <option value="Espírito_Santo">Espírito Santo</option>
-                    <option value="Goiás">Goiás</option>
-                    <option value="Maranhão">Maranhão</option>
-                    <option value="Mato_Grosso">Mato Grosso</option>
-                    <option value="Mato_Grosso_do_Sul">Mato Grosso do Sul</option>
-                    <option value="Minas_Gerais">Minas Gerais</option>
-                    <option value="Pará">Pará</option>
-                    <option value="Paraíba">Paraíba</option>
-                    <option value="Paraná">Paraná</option>
-                    <option value="Pernambuco">Pernambuco</option>
-                    <option value="Piauí">Piauí</option>
-                    <option value="Rio_de Janeiro">Rio de Janeiro</option>
-                    <option value="Rio_Grande_do_Norte">Rio Grande do Norte</option>
-                    <option value="Rio_Grande_do_Sul">Rio Grande do Sul</option>
-                    <option value="Rondônia">Rondônia</option>
-                    <option value="Roraima">Roraima</option>
-                    <option value="Santa_Catarina">Santa Catarina</option>
-                    <option value="São_Paulo">São Paulo</option>
-                    <option value="Sergipe">Sergipe</option>
-                    <option value="Tocantins">Tocantins</option>
-                </select>
-            </div>
-        </fieldset>
-        <div>
+    <main class="container">
+        <h1>Cadastro de Cliente</h1>
+        <form action="cadastraCliente.php" method="post">
             <fieldset>
-                <legend>Informações adicionais</legend>
+                <legend>Dados pessoais:</legend>
+                <div>
+                    <label>
+                        <input type="Hidden" id="Invisivel" value="Invisível">
+                    </label>
+                </div>
+                <div>
+                    <label>Nome:
+                        <input type="text" name="nome" id="nome" minlength="2" maxlength="50" autofocus required>
+                    </label>
+                </div>
+                <div>
+                    <label for="email_usuario">E-mail:
+                        <input type="email" name="email_usuario" id="email_usuario" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="CPF">CPF:
+                        <input type="text" name="cpf" id="cpf" placeholder="xxx.xxx.xxx-xx" maxlength="14" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Idade:
+                        <input type="number" name="idade" id="idade" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Telefone:
+                        <input type="tel" name="telefone" id="telefone" required> 
+                    </label>
+                </div>
+                <div>
+                    <label>Data de nascimento:
+                        <input type="date" name="data_de_nascimento" id="data_de_nascimento" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Sexo:
+                        <input type="text" name="sexo" id="sexo" pattern="[A-Za-z]" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Nacionalidade:
+                        <input type="text" name="nacionalidade" id="nacionalidade" value="brasileiro" readonly pattern="[A-Za-z]" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Estado civil:</label>
+                    <div>
+                        <label><input type="radio" name="estadocivil">Solteiro</label>
+                        <label><input type="radio" name="estadocivil">Casado</label>
+                        <label><input type="radio" name="estadocivil">Divorciado</label>
+                        <label><input type="radio" name="estadocivil">Viúvo(a)</label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Endereço de entrega</legend>
+                <div>
+                    <label>CEP
+                        <input type="text" name="cep" id="cep" required> 
+                    </label>
+                </div>
+                <div>
+                    <label>Tipo de logradouro
+                        <input type="text" name="tipo_de_logradouro" id="tipo_de_logradouro" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Logradouro
+                        <input type="text" name="logradouro" id="logradouro" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Bairro
+                        <input type="text" name="bairro" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Cidade
+                        <input type="text" name="cidade" required>
+                    </label>
+                </div>
+                <div>
+                    <label>Estado</label>
+                    <select name="Estado" id="Estado">
+                        <option value="none">none</option>
+                        <option value="Acre">Acre</option>
+                        <option value="Alagoas">Alagoas</option>
+                        <option value="Amapá">Amapá</option>
+                        <option value="Amazonas">Amazonas</option>
+                        <option value="Bahia">Bahia</option>
+                        <option value="Ceará">Ceará</option>
+                        <option value="Distrito_Federal">Distrito Federal</option>
+                        <option value="Espírito_Santo">Espírito Santo</option>
+                        <option value="Goiás">Goiás</option>
+                        <option value="Maranhão">Maranhão</option>
+                        <option value="Mato_Grosso">Mato Grosso</option>
+                        <option value="Mato_Grosso_do_Sul">Mato Grosso do Sul</option>
+                        <option value="Minas_Gerais">Minas Gerais</option>
+                        <option value="Pará">Pará</option>
+                        <option value="Paraíba">Paraíba</option>
+                        <option value="Paraná">Paraná</option>
+                        <option value="Pernambuco">Pernambuco</option>
+                        <option value="Piauí">Piauí</option>
+                        <option value="Rio_de Janeiro">Rio de Janeiro</option>
+                        <option value="Rio_Grande_do_Norte">Rio Grande do Norte</option>
+                        <option value="Rio_Grande_do_Sul">Rio Grande do Sul</option>
+                        <option value="Rondônia">Rondônia</option>
+                        <option value="Roraima">Roraima</option>
+                        <option value="Santa_Catarina">Santa Catarina</option>
+                        <option value="São_Paulo">São Paulo</option>
+                        <option value="Sergipe">Sergipe</option>
+                        <option value="Tocantins">Tocantins</option>
+                    </select>
+                </div>
+            </fieldset>
+            <div>
                 <fieldset>
-                    <legend>Esporte de interesses</legend>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="Corrida" name="Esportes" value="Corrida">
-                        Corrida</label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="Ciclismo" name="Esportes" value="Ciclismo">
-                        Ciclismo</label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="Natação" name="Esportes" value="Natação">
-                        Natação</label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="Futebol" name="Esportes" value="Futebol">
-                        futebol</label>
-                    </div>
-                    <div>
-                        <label>
-                            <input type="checkbox" id="Basquete" name="Esportes" value="Basquete">
-                        Basquete</label>
-                    </div>
-                </fieldset>
-        </div>
-        <label>Outros esportes:</label>
+                    <legend>Informações adicionais</legend>
+                    <fieldset>
+                        <legend>Esporte de interesses</legend>
+                        <div>
+                            <label><input type="checkbox" id="Corrida" name="Esportes" value="Corrida" required>Corrida</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" id="Ciclismo" name="Esportes" value="Ciclismo" required>Ciclismo</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" id="Natação" name="Esportes" value="Natação" required>Natação</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" id="Futebol" name="Esportes" value="Futebol" required>futebol</label>
+                        </div>
+                        <div>
+                            <label><input type="checkbox" id="Basquete" name="Esportes" value="Basquete" required>Basquete</label>
+                        </div>
+                    </fieldset>
+            </div>
+            <label>Outros esportes:</label>
 
-        <div>
-            <textarea name="Outros_esportes" id="Outros_esportes" rows="6" cols="50" maxlength="50"></textarea>
-        </div>
-            <label>Anexar arquivo:
-                <input type="file" name="Escolher ficheiro"></label>
-        </fieldset>
-        <div>
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
+            <div>
+                <textarea name="Outros_esportes" id="Outros_esportes" rows="6" cols="50" maxlength="50"></textarea>
+            </div>
+                <label>Anexar arquivo:
+                    <input type="file" name="Escolher ficheiro"></label>
+            </fieldset>
+            <div>
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    </main>
 </body>

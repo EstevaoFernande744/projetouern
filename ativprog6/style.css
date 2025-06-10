@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+body {
+  background-color: #ddd;
+  color: #2e36aa;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+
+main {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1, h2, h3 {
+  color: #2e36aa;
+  margin-top: 1.1em;
+  user-select: none;
+}
+
+p {
+  color: black;
+}
+
+img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  margin-top: 10px;
+  display: block;
+}
+
+.corrida {
+  border-top: 1px solid #aaa;
+  padding: 15px 0;
+}
+
+.corrida strong {
+  display: block;
+  font-size: 18px;
+}
+
+.acoes button {
+  margin-right: 10px;
+  margin-top: 8px;
+}
+
+input, button {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #145ea8;
+}
+
+.formulario {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.corrida {
+  border-top: 1px solid #aaa;
+  padding: 10px 0;
+}
+
+.corrida strong {
+  display: block;
+  font-size: 18px;
+}
+
+.acoes button {
+  margin-right: 10px;
+  margin-top: 5px;
+}
